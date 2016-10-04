@@ -9,11 +9,11 @@ import re
 # Simply convert files names to lowercase
 # This way its easier to sort by ignoring case and special chars.
 def get_key(s):
-     return re.sub('[^A-Za-z0-9]+', '', s).lower()
+    return re.sub('[^A-Za-z0-9]+', '', s).lower()
 
 
-# Recursive function to print file tree 
-def draw_tree(path, count, indent = ''):
+# Recursive function to print file tree
+def draw_tree(path, count, indent=''):
     rawList = os.listdir(path)
     fileList = []
 
@@ -47,11 +47,9 @@ def draw_tree(path, count, indent = ''):
             count["files"] = count["files"] + 1
 
 
-
-
-# ******************************  MAIN  ****************************** 
+# ******************************  MAIN  ******************************
 # Count the number of files and dirs
-count = {"files": 0,"dirs": 0}
+count = {"files": 0, "dirs": 0}
 
 if len(sys.argv) == 1:
     print('.')
@@ -65,4 +63,3 @@ elif len(sys.argv) == 2:
     print('%d directories, %d files' % (count["dirs"], count["files"]))
 else:
     print('Invalid arguments! Enter a valid path.')
-
