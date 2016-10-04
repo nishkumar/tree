@@ -31,11 +31,11 @@ def draw_tree(path, count, indent=''):
         # Print file name irrespective of file or dir
         size = size + 1
         if size == len(fileList):
-            #print(indent + "`-- " + fileName)
-            print(indent + "`"+ u'\u002D\u002D' + " " + fileName)
+            # print(indent + "`-- " + fileName)
+            print(indent + "`" + u'\u002D\u002D' + " " + fileName)
         else:
-            #print(indent + "|-- " + fileName)
-            print(indent +"|"+ u'\u002D\u002D' + " "+ fileName)
+            # print(indent + "|-- " + fileName)
+            print(indent + "|" + u'\u002D\u002D' + " " + fileName)
         # If its a directory do a recursive search
         if os.path.isdir(childPath):
             count["dirs"] = count["dirs"] + 1
