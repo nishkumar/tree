@@ -45,7 +45,7 @@ def draw_tree(path, count, indent=''):
             if size == len(fileList):
                 draw_tree(childPath, count, indent + "    ")
             else:
-                draw_tree(childPath, count, indent + '|   ')
+                draw_tree(childPath, count, indent + '│   ')
         else:
             # Is a file
             count["files"] = count["files"] + 1
