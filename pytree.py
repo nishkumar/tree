@@ -34,7 +34,6 @@ def draw_tree(path, count, indent=''):
             print(indent + "`-- " + fileName)
         else:
             print(indent + "|-- " + fileName)
-        
         # If its a directory do a recursive search
         if os.path.isdir(childPath):
             count["dirs"] = count["dirs"] + 1
