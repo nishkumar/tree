@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+# -*- coding: utf-8 -*-
 import subprocess
 import sys
 import os
@@ -32,10 +33,12 @@ def draw_tree(path, count, indent=''):
         size = size + 1
         if size == len(fileList):
             # print(indent + "`-- " + fileName)
-            print(indent + "`" + u'\u002D\u002D' + " " + fileName)
+            # print(indent + "`" + u'\u002D\u002D' + " " + fileName)
+            print(indent + '└── ' + fileName)
         else:
             # print(indent + "|-- " + fileName)
-            print(indent + "|" + u'\u002D\u002D' + " " + fileName)
+            # print(indent + "|" + u'\u002D\u002D' + " " + fileName)
+            print(indent + '├── ' + fileName)
         # If its a directory do a recursive search
         if os.path.isdir(childPath):
             count["dirs"] = count["dirs"] + 1
